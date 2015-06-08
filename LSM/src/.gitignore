@@ -1,0 +1,13 @@
+*.ERR
+*.mod
+*.o
+*.smod
+*.a
+*~
+.depend
+.depend_tmp.old
+.current_options
+/.depend_subdirs
+/.liblist
+/*.bin
+

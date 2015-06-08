@@ -1,0 +1,39 @@
+Compile and run YIBs model:
+
+1. Generate .modelErc file in the root directory and set SAVEDISK path
+
+   SAVEDISK=/scratch            ! This is the directory where YIBs runs
+
+2. Define the path variable 'dirs' in LSM/src/YIBS_1d/read_site_forcing.f
+
+   This is the path for the meteorological input file "US-HO2.forcing.nc"
+
+3. Modify the sample rundeck yibs_site.mk in LSM/WorkSpace directory
+
+   OPTS_YIBS options determine functionality of model
+      PFT_MODEL=YIBS            ! default setting for Farquhar photosynthesis
+      ACTIVE_GROWTH=YES         ! YES - prognostic LAI and tree height
+                                ! NO  - prescribed LAI and tree height from AVHRR
+      RESTART_CPOOLS=YES        ! YES - Restart with equilibrium soil carbon
+                                ! NO  - initialize with climatological soil carbon
+      O3DEP_UPTAKE_OFFLINE=YES  ! YES - Include offline ozone vegetation damage
+                                ! NO  - Without offline ozone vegetation damage
+      O3DEP_UPTAKE=YES          ! YES - Include online ozone vegetation damage
+                                ! NO  - Without online ozone vegetation damage
+      PS_BVOC=YES               ! YES - Calculate BVOC emissions (not output)
+                                ! NO  - Omit BVOC emissions
+
+   DATADIR determines directory of input files
+   
+   INPUT_FILES determines the name of input files
+ 
+   RUN_PARAMETERS determines simulation site name, location, PFT, and time frame
+
+4. Compile the model in the WokeSpace directory
+   
+   gmake setup RUN=yibs_site  (the same name as rundeck without .mk)
+
+5. Run the model in $(SAVEDISK)/yibs_site
+
+   ./yibs_site
+
