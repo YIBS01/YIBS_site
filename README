@@ -29,7 +29,7 @@ Compile and run YIBs model:
  
    RUN_PARAMETERS determines simulation site name, location, PFT, and time frame
 
-4. Compile the model in the WokeSpace directory
+4. Compile the model in the LSM/WorkSpace directory
    
    gmake setup RUN=yibs_site  (the same name as rundeck without .mk)
 
