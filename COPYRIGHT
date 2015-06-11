@@ -1,0 +1,14 @@
+The Yale Interactive terrestrial Biosphere Model (YIBs) version 1.0  
+site-level source code is publicly available and free for scientific 
+research. Proper citations are required for the applications of YIBs:
+
+Yue, X. and Unger, N.: The Yale Interactive Terrestrial Biosphere Model 
+version 1.0 : description, evaluation and implementation into NASA GISS 
+ModelE2, Geosci. Model Dev. Discuss., 8, 3147-3196, 
+doi:10.5194/gmdd-8-3147-2015, 2015.
+
+The source codes for the global off-line and global on-line versions 
+of the YIBs model (version 1.0) are available through collaboration. 
+Please submit request to X. Yue (xu.yue@yale.edu) or N. Unger 
+(nadine.unger@yale.edu). Auxiliary data and related input files including 
+meteorological forcings must be obtained independently.
